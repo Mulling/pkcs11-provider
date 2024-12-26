@@ -4,7 +4,7 @@
 
 # On Fedora/EL completely removed support for explicit EC from libcrypto,
 # so skip the test completely
-if [ -f /etc/redhat-release ]; then
+if [ -n "${DISABLE_EXPLICIT_EC_TEST}" ]; then
     exit 0
 fi
 

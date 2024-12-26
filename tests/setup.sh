@@ -305,8 +305,8 @@ echo "${ECPRI2URI}"
 echo "${ECCRT2URI}"
 echo ""
 
-if [ -f /etc/redhat-release ]; then
-    title PARA "explicit EC unsupported on Fedora/EL"
+if [ -n "${DISABLE_EXPLICIT_EC_TEST}" ]; then
+    title PARA "explicit EC unsupported"
 elif [ "${TOKENTYPE}" == "softokn" ]; then
     title PARA "explicit EC unsupported with softokn"
 else
