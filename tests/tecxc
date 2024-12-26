@@ -2,8 +2,8 @@
 # Copyright (C) 2023 Simo Sorce <simo@redhat.com>
 # SPDX-License-Identifier: Apache-2.0
 
-# On Fedora/EL completely removed support for explicit EC from libcrypto,
-# so skip the test completely
+# Some distributions completely removed support for explicit EC from libcrypto.
+# If `-Ddisable_explicit_EC_test=true` is set, skip the test.
 if [ -n "${DISABLE_EXPLICIT_EC_TEST}" ]; then
     exit 0
 fi
