@@ -305,7 +305,7 @@ echo "${ECPRI2URI}"
 echo "${ECCRT2URI}"
 echo ""
 
-if [ -n "${DISABLE_EXPLICIT_EC_TEST}" ]; then
+if [ -z "${ENABLE_EXPLICIT_EC_TEST}" ]; then
     title PARA "explicit EC unsupported"
 elif [ "${TOKENTYPE}" == "softokn" ]; then
     title PARA "explicit EC unsupported with softokn"

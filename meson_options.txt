@@ -3,7 +3,7 @@ option('preload_libasan',
        value: 'no',
        description: 'Path to libasan.so to preload')
 
-option('disable_explicit_EC_test',
+option('enable_explicit_EC_test',
        type: 'boolean',
        value: false,
-       description: 'Disable explicit EC tests')
+       description: 'Enable explicit EC tests')

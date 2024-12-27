@@ -30,8 +30,8 @@ if nss_softokn.found()
   endif
 endif
 
-if get_option('disable_explicit_EC_test')
-  conf_env.set('DISABLE_EXPLICIT_EC_TEST', '1')
+if get_option('enable_explicit_EC_test')
+  conf_env.set('ENABLE_EXPLICIT_EC_TEST', '1')
 endif
 
 setup_script=find_program('setup.sh')
@@ -51,8 +51,8 @@ test_env = environment({
   'TESTBLDDIR': meson.current_build_dir(),
 })
 
-if get_option('disable_explicit_EC_test')
-  test_env.set('DISABLE_EXPLICIT_EC_TEST', '1')
+if get_option('enable_explicit_EC_test')
+  test_env.set('ENABLE_EXPLICIT_EC_TEST', '1')
 endif
 
 valgrind = find_program('valgrind', required: false)

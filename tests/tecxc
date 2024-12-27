@@ -3,8 +3,8 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # Some distributions completely removed support for explicit EC from libcrypto.
-# If `-Ddisable_explicit_EC_test=true` is set, skip the test.
-if [ -n "${DISABLE_EXPLICIT_EC_TEST}" ]; then
+# If `-Denable_explicit_EC_test=true` is not set, skip the test.
+if [ -z "${ENABLE_EXPLICIT_EC_TEST}" ]; then
     exit 0
 fi
 
