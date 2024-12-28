@@ -5,7 +5,7 @@
 # Some distributions completely removed support for explicit EC from libcrypto.
 # If `-Denable_explicit_EC_test=true` is not set, skip the test.
 if [ -z "${ENABLE_EXPLICIT_EC_TEST}" ]; then
-    exit 0
+    exit 77
 fi
 
 source "${TESTSSRCDIR}/helpers.sh"
